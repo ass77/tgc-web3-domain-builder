@@ -23,6 +23,11 @@ module.exports = {
     mumbai: {
       url: process.env.ALCHEMY_MUMBAI_URL,
       accounts: [process.env.TEST_WALLET_PRIVATE_KEY],
-    }
+    },
+    mainnet: {
+      chainId: 137,
+      url: process.env.PROD_ALCHEMY_MUMBAI_URL,
+      accounts: [process.env.PRIVATE_KEY],
+    },
   }
 };
