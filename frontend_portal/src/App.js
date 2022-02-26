@@ -367,24 +367,25 @@ const App = () => {
 						</div>
 					</header>
 				</div>
-				<div>
-					<h2>Price To Mint based on Characters Length</h2>
-					<div className="price-container">
-						<div className="price-card">
-							<div className="price-face price-face--front">3 </div>
-							<div className="price-face price-face--back">0.3 MATIC</div>
-						</div>
-						<div className="price-card">
-							<div className="price-face price-face--front">4 </div>
-							<div className="price-face price-face--back">0.4 MATIC</div>
-						</div>
-						<div className="price-card">
-							<div className="price-face price-face--front"> {`> 5`}</div>
-							<div className="price-face price-face--back">0.5 MATIC</div>
+				{currentAccount &&
+					<div>
+						<h2>Price To Mint based on Characters Length</h2>
+						<div className="price-container">
+							<div className="price-card">
+								<div className="price-face price-face--front">3 </div>
+								<div className="price-face price-face--back">0.3 MATIC</div>
+							</div>
+							<div className="price-card">
+								<div className="price-face price-face--front">4 </div>
+								<div className="price-face price-face--back">0.4 MATIC</div>
+							</div>
+							<div className="price-card">
+								<div className="price-face price-face--front"> {`> 5`}</div>
+								<div className="price-face price-face--back">0.5 MATIC</div>
+							</div>
 						</div>
 					</div>
-				</div>
-
+				}
 				{!currentAccount ? renderNotConnectedContainer() : renderInputForm()}
 				{mints && renderMints()}
 
